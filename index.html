@@ -1,5 +1,4 @@
-
-      export default function HamariDuniyaWebsite() { const posts = [ { title: "How To Start Online Earning In Pakistan", category: "Online Earning", image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop", }, { title: "Daily Islamic Reminder For Peaceful Life", category: "Islamic", image: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop", }, { title: "Top Mobile Apps Every Student Should Use", category: "Technology", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop", }, ];
+export default function HamariDuniyaWebsite() { const categories = [ "Islamic", "Technology", "Online Earning", "Health", "Pakistan", ]; const posts = [ { title: "How To Start Online Earning In Pakistan", category: "Online Earning", image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop", }, { title: "Daily Islamic Reminder For Peaceful Life", category: "Islamic", image: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop", }, { title: "Top Mobile Apps Every Student Should Use", category: "Technology", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop", }, ];
 
 return ( <div className="bg-gray-100 min-h-screen text-gray-800"> {/* Navbar */} <header className="bg-green-700 text-white shadow-lg"> <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"> <div> <h1 className="text-3xl font-bold">Hamari Duniya</h1> <p className="text-sm opacity-90"> Knowledge • Inspiration • Daily Updates </p> </div>
 
@@ -50,7 +49,24 @@ return ( <div className="bg-gray-100 min-h-screen text-gray-800"> {/* Navbar */}
 
   {/* Blog Section */}
   <section className="max-w-7xl mx-auto px-6 py-16">
-    <div className="flex items-center justify-between mb-10">
+    <div className="bg-white rounded-3xl shadow-lg p-6 mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div>
+        <h3 className="text-4xl font-bold">Latest Articles</h3>
+        <p className="text-gray-600 mt-2">
+          Daily updated blogs for Pakistani readers.
+        </p>
+      </div>
+
+      <div className="flex gap-3 flex-wrap">
+        {categories.map((cat, index) => (
+          <button
+            key={index}
+            className="bg-green-100 hover:bg-green-700 hover:text-white text-green-700 px-4 py-2 rounded-xl transition"
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
       <h3 className="text-4xl font-bold">Latest Articles</h3>
       <input
         type="text"
@@ -91,6 +107,109 @@ return ( <div className="bg-gray-100 min-h-screen text-gray-800"> {/* Navbar */}
           </div>
         </div>
       ))}
+    </div>
+  </section>
+
+  {/* Multiple Blog Pages */}
+  <section className="max-w-7xl mx-auto px-6 py-10">
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="bg-white rounded-3xl shadow-lg p-6">
+        <h4 className="text-2xl font-bold mb-4">Islamic Blogs</h4>
+        <ul className="space-y-3 text-gray-600">
+          <li>• Importance Of Namaz</li>
+          <li>• Daily Quran Reminder</li>
+          <li>• Islamic Motivation</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-3xl shadow-lg p-6">
+        <h4 className="text-2xl font-bold mb-4">Technology Blogs</h4>
+        <ul className="space-y-3 text-gray-600">
+          <li>• Best AI Tools</li>
+          <li>• Mobile Tips</li>
+          <li>• Internet Guides</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-3xl shadow-lg p-6">
+        <h4 className="text-2xl font-bold mb-4">Online Earning</h4>
+        <ul className="space-y-3 text-gray-600">
+          <li>• Freelancing Tips</li>
+          <li>• AdSense Guides</li>
+          <li>• YouTube Earning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Admin Dashboard Preview */}
+  <section className="bg-green-50 py-16 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h3 className="text-4xl font-bold text-center mb-10">
+        Admin Dashboard Preview
+      </h3>
+
+      <div className="grid md:grid-cols-4 gap-6">
+        <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
+          <h4 className="text-3xl font-bold">120+</h4>
+          <p className="text-gray-600 mt-2">Published Blogs</p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
+          <h4 className="text-3xl font-bold">5K</h4>
+          <p className="text-gray-600 mt-2">Monthly Visitors</p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
+          <h4 className="text-3xl font-bold">$250</h4>
+          <p className="text-gray-600 mt-2">Estimated Revenue</p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
+          <h4 className="text-3xl font-bold">SEO</h4>
+          <p className="text-gray-600 mt-2">Google Optimized</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Professional Logo Section */}
+  <section className="py-16 px-6 bg-white">
+    <div className="max-w-4xl mx-auto text-center">
+      <div className="w-32 h-32 bg-green-700 rounded-full mx-auto flex items-center justify-center shadow-2xl">
+        <span className="text-5xl">🌍</span>
+      </div>
+
+      <h3 className="text-5xl font-extrabold mt-6 text-green-800">
+        Hamari Duniya
+      </h3>
+
+      <p className="text-gray-600 text-lg mt-4">
+        Knowledge • Inspiration • Daily Updates
+      </p>
+    </div>
+  </section>
+
+  {/* SEO Setup */}
+  <section className="max-w-6xl mx-auto px-6 py-10">
+    <div className="bg-white rounded-3xl shadow-lg p-8">
+      <h3 className="text-3xl font-bold mb-6">SEO Optimization Features</h3>
+
+      <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+        <div>
+          <p>✔ Google Search Friendly Structure</p>
+          <p>✔ Fast Loading Design</p>
+          <p>✔ Mobile Responsive Layout</p>
+          <p>✔ SEO Headings & Keywords</p>
+        </div>
+
+        <div>
+          <p>✔ AdSense Ready</p>
+          <p>✔ Blog Categories</p>
+          <p>✔ Search Box Included</p>
+          <p>✔ User Friendly Navigation</p>
+        </div>
+      </div>
     </div>
   </section>
 
