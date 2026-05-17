@@ -1,246 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Online Quran Teaching Academy</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+      export default function HamariDuniyaWebsite() { const posts = [ { title: "How To Start Online Earning In Pakistan", category: "Online Earning", image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop", }, { title: "Daily Islamic Reminder For Peaceful Life", category: "Islamic", image: "https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop", }, { title: "Top Mobile Apps Every Student Should Use", category: "Technology", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop", }, ];
 
-    body{
-      background:#0d1117;
-      color:white;
-    }
+return ( <div className="bg-gray-100 min-h-screen text-gray-800"> {/* Navbar */} <header className="bg-green-700 text-white shadow-lg"> <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"> <div> <h1 className="text-3xl font-bold">Hamari Duniya</h1> <p className="text-sm opacity-90"> Knowledge • Inspiration • Daily Updates </p> </div>
 
-    header{
-      background:linear-gradient(135deg,#111827,#1f2937);
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-      color:#facc15;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:25px;
-      transition:0.3s;
-    }
-
-    nav a:hover{
-      color:#facc15;
-    }
-
-    .hero{
-      height:90vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-      background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-      url('https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-    }
-
-    .hero-content h1{
-      font-size:60px;
-      color:#facc15;
-      margin-bottom:20px;
-    }
-
-    .hero-content p{
-      font-size:20px;
-      margin-bottom:30px;
-      line-height:1.6;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:15px 35px;
-      background:#facc15;
-      color:black;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:40px;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:white;
-    }
-
-    section{
-      padding:80px 8%;
-    }
-
-    .title{
-      text-align:center;
-      font-size:40px;
-      color:#facc15;
-      margin-bottom:50px;
-    }
-
-    .courses{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      background:#161b22;
-      padding:30px;
-      border-radius:20px;
-      transition:0.3s;
-      text-align:center;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-      background:#1f2937;
-    }
-
-    .card h3{
-      color:#facc15;
-      margin-bottom:15px;
-    }
-
-    .about{
-      text-align:center;
-      line-height:1.8;
-      font-size:18px;
-    }
-
-    footer{
-      background:#111827;
-      text-align:center;
-      padding:30px;
-    }
-
-    .whatsapp{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:15px 20px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      box-shadow:0 0 10px rgba(0,0,0,0.4);
-    }
-
-    @media(max-width:768px){
-
-      .hero-content h1{
-        font-size:40px;
-      }
-
-      nav{
-        display:none;
-      }
-
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="logo">Quran Academy</div>
-
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav className="hidden md:flex gap-6 font-medium">
+        <a href="#" className="hover:text-yellow-300 transition">
+          Home
+        </a>
+        <a href="#" className="hover:text-yellow-300 transition">
+          Islamic
+        </a>
+        <a href="#" className="hover:text-yellow-300 transition">
+          Technology
+        </a>
+        <a href="#" className="hover:text-yellow-300 transition">
+          Online Earning
+        </a>
+        <a href="#" className="hover:text-yellow-300 transition">
+          Contact
+        </a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Online Quran Teaching Academy</h1>
+  {/* Hero Section */}
+  <section className="relative">
+    <img
+      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop"
+      alt="Hero"
+      className="w-full h-[450px] object-cover"
+    />
 
-      <p>
-        Learn Quran Online with Professional Islamic Teachers.
-        Join Our Luxury Islamic Learning Platform Today.
+    <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-center px-6">
+      <div>
+        <h2 className="text-5xl font-extrabold text-white mb-4">
+          Welcome To Hamari Duniya
+        </h2>
+        <p className="text-gray-200 max-w-2xl mx-auto text-lg">
+          Explore Islamic knowledge, technology updates, online earning
+          guides, and daily inspiration.
+        </p>
+
+        <button className="mt-8 bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-2xl font-semibold shadow-lg transition">
+          Explore Blogs
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* Blog Section */}
+  <section className="max-w-7xl mx-auto px-6 py-16">
+    <div className="flex items-center justify-between mb-10">
+      <h3 className="text-4xl font-bold">Latest Articles</h3>
+      <input
+        type="text"
+        placeholder="Search blog..."
+        className="px-4 py-2 rounded-xl border border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {posts.map((post, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-3xl overflow-hidden shadow-lg hover:scale-105 transition duration-300"
+        >
+          <img
+            src={post.image}
+            alt={post.title}
+            className="h-56 w-full object-cover"
+          />
+
+          <div className="p-6">
+            <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+              {post.category}
+            </span>
+
+            <h4 className="text-2xl font-bold mt-4 mb-3 leading-snug">
+              {post.title}
+            </h4>
+
+            <p className="text-gray-600 mb-5">
+              Read useful and informative content designed for Pakistani and
+              international audiences.
+            </p>
+
+            <button className="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-xl transition">
+              Read More
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* About */}
+  <section className="bg-white py-16 px-6">
+    <div className="max-w-5xl mx-auto text-center">
+      <h3 className="text-4xl font-bold mb-6">About Hamari Duniya</h3>
+      <p className="text-lg text-gray-600 leading-8">
+        Hamari Duniya is a modern Pakistani blogging platform sharing
+        Islamic knowledge, technology news, online earning ideas, lifestyle
+        tips, and motivational content for everyone.
       </p>
-
-      <a href="tel:03437353621" class="btn">Call Now</a>
     </div>
   </section>
 
-  <section id="about">
-    <h2 class="title">About Us</h2>
-
-    <div class="about">
-      We provide high quality online Quran classes for kids and adults.
-      Our academy offers all Islamic courses with experienced teachers
-      in a peaceful and professional environment.
+  {/* Adsense Placeholder */}
+  <section className="max-w-5xl mx-auto px-6 py-10">
+    <div className="border-2 border-dashed border-gray-400 rounded-2xl p-10 text-center bg-white shadow-sm">
+      <h4 className="text-2xl font-bold mb-3">Google AdSense Area</h4>
+      <p className="text-gray-600">
+        You can place your Google AdSense ads here after approval.
+      </p>
     </div>
   </section>
 
-  <section id="courses">
-    <h2 class="title">Our Courses</h2>
-
-    <div class="courses">
-
-      <div class="card">
-        <h3>Quran Reading</h3>
-        <p>Learn Quran with proper pronunciation.</p>
+  {/* Footer */}
+  <footer className="bg-green-800 text-white mt-16">
+    <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h5 className="text-2xl font-bold mb-3">Hamari Duniya</h5>
+        <p className="text-gray-200">
+          A Pakistani blogging platform for knowledge, inspiration, and
+          growth.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Hifz-ul-Quran</h3>
-        <p>Memorize the Holy Quran with expert tutors.</p>
+      <div>
+        <h5 className="text-xl font-semibold mb-3">Quick Links</h5>
+        <ul className="space-y-2 text-gray-200">
+          <li>Home</li>
+          <li>About</li>
+          <li>Privacy Policy</li>
+          <li>Contact</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <h3>Tajweed Course</h3>
-        <p>Improve your Quran recitation beautifully.</p>
+      <div>
+        <h5 className="text-xl font-semibold mb-3">Contact</h5>
+        <p className="text-gray-200">Email: info@hamariduniya.com</p>
+        <p className="text-gray-200">Pakistan</p>
       </div>
-
-      <div class="card">
-        <h3>Islamic Studies</h3>
-        <p>Learn basic and advanced Islamic knowledge.</p>
-      </div>
-
     </div>
-  </section>
 
-  <section id="contact">
-    <h2 class="title">Contact Us</h2>
-
-    <div class="about">
-      📞 Phone Number: 03437353621
-      <br><br>
-      Available 24/7 for Online Quran Classes
+    <div className="border-t border-white/20 py-4 text-center text-sm text-gray-300">
+      © 2026 Hamari Duniya — All Rights Reserved
     </div>
-  </section>
-
-  <footer>
-    © 2026 Online Quran Teaching Academy | All Rights Reserved
   </footer>
+</div>
 
-  <a class="whatsapp" href="https://wa.me/923437353621">
-    WhatsApp
-  </a>
-
-</body>
-</html>
+); }
